@@ -1,0 +1,40 @@
+:root {
+  --color-dark: #8a8a8a;
+  --color-dark-alt: #656565;
+  --color-light: #ffffff;
+  --color-pink: #fff2f2;
+  --color-pink-alt: #fdeaea ;
+  --color-pink-second: #ffe1e1;
+  --color-blue-light: #eef7ff;
+  --color-blue: #2e3192;
+  --color-blue-text: #1e2d78;
+  --color-red-text: #DD3333;
+  --color-gray-alt: #898989;
+  --color-accent: #B9FF66;
+  --border: 2px solid #dce6f5;
+  --border-radius: 14px;
+  --border-radius-small: 5px;
+  
+ 
+
+  --font-family-base: 'Open Sans', sans-serif;
+  --font-family-alt: 'Catamaran', sans-serif;
+
+  --container-width: 1920px;
+  --container-padding-x: 40px;
+
+  --section-padding-y: 142px;
+
+  --input-height: 59px;
+  --button-height: 56px;
+
+  --transition-duration: 0.3s;
+
+  @include desktop{
+    --section-padding-y: 50px;
+  }
+  @include mobile{
+    --section-padding-y: 30px;
+  }
+}
+

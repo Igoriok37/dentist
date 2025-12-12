@@ -1,0 +1,42 @@
+.advantages {
+  margin-bottom: 9.19rem;
+  display: flex;
+  justify-content: center;
+
+  @include mobile {
+    margin-bottom: 4rem;
+  }
+
+ 
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 4.68rem;
+
+    @include desktop-l {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2rem;
+    }
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    column-gap: 1.6rem;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 19px;
+    line-height: 1.316;
+    margin-bottom: .8rem;
+    letter-spacing: -.99px;
+  }
+
+  &__description {
+    line-height: 1.667;
+    color: var(--color-dark);
+  }
+}

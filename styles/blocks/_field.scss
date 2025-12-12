@@ -1,0 +1,18 @@
+.field {
+  &__input {
+    @include reset-button;
+    
+    width: 5.5rem;
+  }
+
+  &__input::placeholder {
+    font-family: var(--font-family-base);
+    padding: 0;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 4.53846;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-blue-text);
+  }
+}

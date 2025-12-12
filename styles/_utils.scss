@@ -1,0 +1,53 @@
+.container {
+  max-width: var(--container-width);
+  margin-inline: auto;
+  
+}
+.inner {
+  max-width: 1300px;
+  width: 100%;
+
+  @include desktop-l {
+    padding-inline: 2rem;
+  }
+}
+
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.hidden-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.vizible-mobile {
+  @include mobile-above {
+    display: none !important;
+  }
+}
+.hidden-mobile-s {
+  @include mobile-s {
+    display: none !important;
+  }
+}
+
+.vizible-mobile-s {
+  @include mobile-s-above {
+    display: none !important;
+  }
+}
+
+.hidden-tablet {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.vizible-tablet {
+  @include tablet-above {
+    display: none !important;
+  }
+}

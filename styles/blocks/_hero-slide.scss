@@ -1,0 +1,58 @@
+.hero-slide {
+  
+  &__body {
+    padding: 9.58vw 16vw;
+
+    @include tablet {
+      padding: 6vw 6vw;
+    }
+  }
+
+  &__info {
+    max-width: 38.9rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+
+  &__above-title {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.76923;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    background-color: var(--color-red-text);
+    max-width: 10.5rem;
+    padding: 3px 10px;
+    border-radius: var(--border-radius-small);
+  }
+
+  &__title {
+    @include fluid-text (65, 24);
+
+    font-family: var(--font-family-base);
+    line-height: 1.1;
+    letter-spacing: -4px;
+    font-weight: 600;
+    color: var(--color-blue-text);
+    background-color: #fff;
+    border-radius: var(--border-radius-small);
+    padding: 0px 20px;
+    width: fit-content;
+
+    @include desktop {
+      line-height: 1.1;
+      letter-spacing: -2px;
+    }
+    @include mobile {
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+  }
+
+  &__buttons {
+    margin-top: 1.7rem;
+    display: flex;
+    column-gap: 1rem;
+  }
+}

@@ -1,0 +1,72 @@
+.hero {
+  margin-bottom: 6.5rem;
+
+  &-button-next,
+  &-button-prev{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.9vw;
+    height: 2.9vw;
+    border: none;
+  }
+  
+
+  &-pagination {
+    position: absolute;
+
+    &-bullet {
+      width: 8px;
+      height: 8px;
+      background-color: var(--color-dark);
+      user-select: none;
+      margin: 0 !important;
+      opacity: 1 !important;
+      margin: 10px  !important;
+      margin-block: 3.5vw !important;
+
+      @include tablet {
+        margin-block: 2vw !important;
+      }
+
+      @include mobile {
+        width: 4px;
+        height: 4px;
+        margin: 5px  !important;
+        margin-block: 2vw !important;
+      }
+
+      @include mobile-s {
+        margin-block: 1vw !important;
+      }
+      
+      
+      
+      &-active {
+        content: '';
+        width: 12px;
+        height: 12px;
+        background-color: var(--color-blue-text) !important;
+
+        @include mobile {
+          width: 6px;
+          height: 6px;
+        }
+      }
+    }
+  }
+  &-button-prev:after,
+  &-button-next:after {
+    font-size: 2.5vw;
+  }
+
+  &-button-prev {
+    left: 2.1vw;
+  } 
+
+  &-button-next {
+    right: 2.1vw;
+  }  
+
+}
+

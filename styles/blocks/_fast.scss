@@ -1,0 +1,95 @@
+.fast {
+  background-color: var(--color-pink-alt);
+  display: flex;
+  justify-content: center;
+
+  &__inner {
+    padding-top: 7.7rem;
+    padding-bottom: 9.5rem;
+    user-select: none;
+    
+    @include tablet {
+      padding-block: 4rem;
+    }
+  }
+
+  &__list > &__input[type="radio"] {
+    display: none;
+  }
+
+ 
+
+  &__label {
+    text-align: center;
+    height: 3.1rem;
+    border-bottom: 2px solid var(--color-pink-second);
+    font-family: var(--font-family-alt);
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 1.316;
+    text-align: center;
+    letter-spacing: -1px;
+    width: 20rem;
+    display: inline-block;
+    padding-block: 0.5rem;
+   
+  }
+
+  &__body {
+    display: none;
+  }
+
+  #tab-btn-1:checked~#content-1,
+  #tab-btn-2:checked~#content-2,
+  #tab-btn-3:checked~#content-3, 
+  #tab-btn-4:checked~#content-4 {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1rem;
+
+    @include tablet {
+      margin-top: 2rem;
+      flex-direction: column;
+      row-gap: 2rem;
+      width: 100%;
+    }
+  }
+
+  
+  &__list > &__input[type="radio"]:checked + label {
+    border-bottom: 2px solid var(--color-red-text);
+  }
+
+  &__info {
+    max-width: 35.75rem;
+
+    @include tablet {
+      max-width: none;
+    }
+  }
+
+  &__title {
+    line-height: 1.257;
+    letter-spacing: -2px;
+    margin-bottom: 0.5rem;
+  }
+
+  &__subtitle {
+    font-size: 19px;
+    line-height: 1.57895;
+    color: var(--color-dark-alt);
+    margin-bottom: .5rem;
+  }
+
+  &__description {
+    line-height: 1.667;
+    color: var(--color-dark-alt);
+  }
+
+  &__image {
+    @include tablet {
+      width: 100%;
+    }
+  }
+}

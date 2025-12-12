@@ -1,0 +1,58 @@
+.fully {
+  &__inner {
+    display: flex;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__body {
+    background-color: var(--color-blue-light);
+    max-width: 46.875vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      max-width: none;
+    }
+  }
+
+  &__info {
+    max-width: 532px;
+    margin-left: 4.58vw;
+  }
+
+  &__above-title {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.92346;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--color-red-text);
+    margin-bottom: .3rem;
+  }
+
+  &__title {
+    font-family: var(--font-family-base);
+    font-size: 42px;
+    line-height: 1.119;
+    letter-spacing: -2px;
+    margin-bottom: 1.5rem;
+  }
+
+  &__description {
+    line-height: 1.667;
+    color: var(--color-dark);
+  }
+
+  &__video {
+    @include tablet {
+      width: 100%;
+      aspect-ratio: 1;
+      height: auto;
+    }
+  }
+}

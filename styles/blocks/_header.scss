@@ -1,0 +1,104 @@
+.header {
+  color: var(--color-blue-text);
+  &__top {
+    &-inner{
+    padding: 0.5rem 2.8rem;
+    background-color: var(--color-blue);
+    color: var(--color-light);
+    font-size: 13px;
+    line-height: 1.667;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+      justify-content: center;
+    }
+    }
+  }
+
+  &__grafic {
+    span {
+      font-size: 17px;
+      margin-left: .9rem;
+    }
+  }
+
+  &__contacts {
+    display: flex; 
+    align-items: center;
+    column-gap: 4rem;
+
+  }
+
+  span {
+    position: relative;
+    left: -8%;
+  }
+
+  &__inner {
+    padding: 0 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile {
+      padding: .5rem 2.5rem;
+    }
+  }
+
+  &__logo {
+    height: 100%;
+  }
+  .active {
+    border-top: 3px solid var(--color-red-text);
+
+  }
+  &__menu {
+    &-list {
+      display: flex;
+      
+    }
+
+    &-link {
+      padding: 45px 35px;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 600;
+      line-height: 0.76923;
+      letter-spacing: 0.2em;
+      position: relative;
+
+      @include hover {
+        &::after {
+          width: 70%;
+        }
+      }
+  
+      &::after{
+        content: '';
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        translate: -50%;
+        width: 0;
+        height: 2px;
+        background-color: currentColor;
+        transition-duration: inherit;
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+}
+.header .active {
+  @include hover {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+

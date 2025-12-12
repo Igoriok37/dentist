@@ -1,0 +1,39 @@
+.discount {
+  margin-top: 4.5rem;
+  background-color: var(--color-blue);
+  display: flex;
+  justify-content: center;
+  color: var(--color-light);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 4.375rem;
+    
+    @include tablet {
+      flex-direction: column;
+      row-gap: 2rem;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-family-alt);
+    font-weight: 400;
+    line-height: 1.257;
+    letter-spacing: -.6px;
+
+    span {
+      color: var(--color-red-text);
+    }
+  }
+
+  &__description {
+    font-size: 19px;
+    line-height: 1.57895;
+  }
+
+  &__button {
+    align-self: end;
+  }
+}

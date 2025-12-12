@@ -1,0 +1,72 @@
+.accordion {
+  &__list {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    counter-reset: custom-counter;
+    list-style: none;
+
+    @include mobile {
+      row-gap: 20px;
+    }
+  }
+
+  &__details {
+    --indicatorVerticalRotate: 90deg;
+
+    background-color: var(--color-gray);
+    color: var(--color-dark);
+    transition-duration: var(--transition-duration);
+
+    &[open] {
+      --indicatorVerticalRotate: 0deg;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    cursor: pointer;
+    user-select: none;
+
+    @include mobile {
+      column-gap: 8px;
+    }
+  } 
+
+  &__title{
+    font-size: 15px;
+    font-weight: 400;
+    font-family: var(--font-family-base);
+    color: var(--color-dark);
+  }
+
+  &__indicator {
+    @include flex-center;
+    @include square(12px);
+    
+    flex-shrink: 0;
+    position: relative;
+
+    @include mobile {
+      @include square(10px)
+    }
+
+    &::before,
+    &::after {
+      @include abs-center;
+
+      content: '';
+      width: 80%;
+      height: 10%;
+      background-color: var(--color-red-text);
+    }
+
+    &::after {
+      rotate: var(--indicatorVerticalRotate);
+      transition-duration: var(--transition-duration);
+    }
+  }
+}
